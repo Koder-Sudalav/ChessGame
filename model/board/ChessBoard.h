@@ -2,7 +2,6 @@
 #define CHESSBOARD_H
 
 #include <iostream>
-#include <string>
 #include <io.h>
 #include <fcntl.h>
 
@@ -71,6 +70,11 @@ public:
   wchar_t (*getChessBoard())[10] {
     return chessBoard;
   }
+
+  void setPiece(int row, int col, wchar_t piece) {
+    chessBoard[row][col] = piece;
+  }
+
   void showChessBoard() {
     for (int i = 0; i < 10; i++) {
       for (int j = 0; j < 10; j++) {

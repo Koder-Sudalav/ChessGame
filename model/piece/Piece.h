@@ -1,5 +1,6 @@
 #ifndef PIECE_H
 #define PIECE_H
+#include "../enum/Color.h"
 #include <iostream>
 #include <string>
 
@@ -7,13 +8,21 @@ using namespace std;
 
 class Piece {
 private:
-  string color;
+  Color color;
+  wchar_t model;
 public:
-  void pieceColor(string c) {
-    color = c;
+  Piece(Color color) : color(color) {}
+  void setColor(Color color) {
+    color = color;
   }
-  string getColor() {
+  Color getColor() {
     return color;
+  }
+  void setModel(wchar_t figure) {
+    model = figure;
+  }
+  wchar_t getModel() {
+    return model;
   }
 };
 
