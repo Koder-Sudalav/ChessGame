@@ -1,3 +1,0 @@
-#Chess
-
-Alpha version
