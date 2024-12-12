@@ -10,6 +10,7 @@ class Piece {
 private:
   Color color;
   wchar_t model;
+  int col, row;
 public:
   Piece(Color color) : color(color) {}
   void setColor(Color color) {
@@ -23,6 +24,18 @@ public:
   }
   wchar_t getModel() {
     return model;
+  }
+  void setCol(int x) {
+    col = x;
+  }
+  int getCol() {
+    return col;
+  }
+  void setRow(int y) {
+    row = y;
+  }
+  int getRow() {
+    return row;
   }
 };
 
